@@ -12,8 +12,8 @@
       <span id="location"></span>&nbsp;
       <span id="date"></span>
     </div>
-		<div class="container">
-			<div class="row ">
+		<div class="container ">
+			<div class="row">
 				<div class="col">
 					<form id="formData" class="mt-5">
 						<div class="form-group">
@@ -24,14 +24,18 @@
 						</div>
 					</form>
 					<button type="button" onclick="submit()" class="btn btn-primary btn-block">Get Weather information</button>
+					<button type="button" onclick="getSavedData()" class="btn btn-primary btn-block">Get saved Weather information</button>
+						<div class="alert alert-danger" style="display: none;" id="noContent" role="alert">
+					    No content found
+						</div>
 				</div>
 			</div>
-      <div class="card mt-5 p-5">
+      <div id="card" class="card mt-5 p-5" style="display: none;">
       <div class="row justify-content-between">
         <div class="col-sm-4">
           <div class="text-center">
-             <span id="temp">12*</span> <br/>
-              <span id="tempDesc">Cloudy</span>
+             <span class="temp" id="temp">12*</span> <br/>
+              <span class="tempDesc" id="tempDesc">Cloudy</span>
           </div>
           <div class="d-flex mt-2 justify-content-between">
                <div class="weather-info">
@@ -45,10 +49,13 @@
           </div>
         </div>
           <diV class="col-sm-4">
-             <span id="city" class="text-white text-lg mt-5 d-block">Andton</span>
+             <span id="city" class="text-white text-lg mt-5 d-block"></span>
           </diV>
       </div>
+
+      	<button type="button" onclick="saveData()" class="btn btn-primary btn-block">Save data</button>
       </div>
+      <div id="prevEl"></div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="./scripts/main.js" async></script>

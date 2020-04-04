@@ -58,4 +58,8 @@ span#tempDesc {
 .text-lg {
   font-size: 3rem;
 }
+
+button {
+  cursor: pointer;
+}
 /*# sourceMappingURL=main.css.map */
