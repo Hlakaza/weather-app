@@ -4,6 +4,16 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
+  line-height: 1.2;
+}
+
+.card {
+  background: rgb(47,43,136);
+background: -moz-linear-gradient(0deg, rgba(47,43,136,1) 0%, rgba(49,33,120,1) 48%, rgba(47,44,138,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(47,43,136,1) 0%, rgba(49,33,120,1) 48%, rgba(47,44,138,1) 100%);
+background: linear-gradient(0deg, rgba(47,43,136,1) 0%, rgba(49,33,120,1) 48%, rgba(47,44,138,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2f2b88",endColorstr="#2f2c8a",GradientType=1);
+border-radius: 20px;
 }
 
 .heading-date {
@@ -11,4 +21,35 @@ body {
     background-color: #2b244d;
     color: white;
     font-size: 1.8rem;
+}
+
+#temp {
+    font-size: 8rem;
+    color: #fff;
+    font-weight: bold;
+}
+span#tempDesc {
+    color: white;
+    font-size: 2.5rem;
+}
+.weather-info {
+    text-align: center;
+}
+.desc {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.5294117647058824);
+}
+.value {
+    font-size: 2rem;
+    color: #ffffffb5;
+}
+.form-control {
+    background: transparent !important;
+    border: 2px solid #ffffff75 !important;
+    height: 50px;
+    color: white !important;
+}
+
+.text-lg{
+  font-size: 3rem;
 }

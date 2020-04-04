@@ -13,20 +13,42 @@
       <span id="date"></span>
     </div>
 		<div class="container">
-			<div class="row">
+			<div class="row ">
 				<div class="col">
-					<form id="formData" action="#">
+					<form id="formData" class="mt-5">
 						<div class="form-group">
-							<label for="exampleInputEmail1">Type your city </label>
-							<input type="text" class="form-control" name="inputName" id="inputName" aria-describedby="emailHelp" />
+							<input type="text" placeholder="Type your city" class="form-control" name="inputName" id="inputName" aria-describedby="emailHelp" />
 						</div>
 						<div class="alert alert-danger" style="display: none;" id="error" role="alert">
-						Please make sure you enter th name of a place
+					    	Please make sure you enter th name of a place
 						</div>
 					</form>
-					<button type="button" onclick="submit()" class="btn btn-primary">Submit</button>
+					<button type="button" onclick="submit()" class="btn btn-primary btn-block">Get Weather information</button>
 				</div>
 			</div>
+      <div class="card mt-5 p-5">
+      <div class="row justify-content-between">
+        <div class="col-sm-4">
+          <div class="text-center">
+             <span id="temp">12*</span> <br/>
+              <span id="tempDesc">Cloudy</span>
+          </div>
+          <div class="d-flex mt-2 justify-content-between">
+               <div class="weather-info">
+                <span class="desc">HUMIDITY</span> <br>
+                <span class="value" id="humid">64%</span>
+              </div>
+               <div class="weather-info">
+                <span class="desc">WIND</span> <br>
+                <span class="value" id="wind">12 K/M</span>
+              </div>
+          </div>
+        </div>
+          <diV class="col-sm-4">
+             <span id="city" class="text-white text-lg mt-5 d-block">Andton</span>
+          </diV>
+      </div>
+      </div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="./scripts/main.js" async></script>
