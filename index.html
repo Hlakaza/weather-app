@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather App</title>
+		<link rel="stylesheet" href="./styles/bootstrap.min.css" />
+		<link rel="stylesheet" href="./styles/main.css" />
+	</head>
+	<body>
+		<div class="col-12 text-center heading-date">
+      <span id="location"></span>&nbsp;
+      <span id="date"></span>
+    </div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<form id="formData" action="#">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Type your city </label>
+							<input type="text" class="form-control" name="inputName" id="inputName" aria-describedby="emailHelp" />
+						</div>
+						<div class="alert alert-danger" style="display: none;" id="error" role="alert">
+						Please make sure you enter th name of a place
+						</div>
+					</form>
+					<button type="button" onclick="submit()" class="btn btn-primary">Submit</button>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="./scripts/main.js" async></script>
+	</body>
+</html>
