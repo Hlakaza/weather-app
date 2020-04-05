@@ -65,14 +65,15 @@ function saveData() {
 function getSavedData() {
   const  savedData = localStorage.getItem('weatherArray')
   const  array = savedData ? JSON.parse(savedData) : [];
+  
   if (array.length < 1) {
     document.getElementById('noContent').style.display = 'block'
   } else {
         document.getElementById('noContent').style.display = 'none'
   }
+
   let elements;
   for(let i = 0; i < array.length; i++) {
-    debugger
      elements += `
      <div class="card mt-5 p-5">
       <div class="row justify-content-between">
@@ -99,5 +100,4 @@ function getSavedData() {
       </div>`
   }
   prevEl.innerHTML = elements
-
 }
