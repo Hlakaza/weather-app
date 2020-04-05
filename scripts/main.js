@@ -70,18 +70,21 @@ function getSavedData() {
   } else {
         document.getElementById('noContent').style.display = 'none'
   }
+  let elements;
   for(let i = 0; i < array.length; i++) {
-     prevEl.innerHTML = `<div class="card>
+    debugger
+     elements += `
+     <div class="card mt-5 p-5">
       <div class="row justify-content-between">
         <div class="col-sm-4">
           <div class="text-center">
-             <span class="temp">${array[i].main.temp + '°'}</span> <br/>
-              <span class="tempDesc">${array[i].weather[0].description}</span>
+             <span class="temp">${array[i]['main'].temp + '°'}</span> <br/>
+              <span class="tempDesc">${array[i]['weather'][0].description}</span>
           </div>
           <div class="d-flex mt-2 justify-content-between">
                <div class="weather-info">
                 <span class="desc">HUMIDITY</span> <br>
-                <span class="value">${ array[i].main.humidity + '%'}</span>
+                <span class="value">${ array[i]['main'].humidity + '%'}</span>
               </div>
                <div class="weather-info">
                 <span class="desc">WIND</span> <br>
@@ -95,4 +98,6 @@ function getSavedData() {
       </div>
       </div>`
   }
+  prevEl.innerHTML = elements
+
 }
