@@ -9,8 +9,8 @@ const wind = document.getElementById('wind');
 const city = document.getElementById('city');
 const card = document.getElementById('card');
 const errorText = document.getElementById('error');
-const locationEl =  document.getElementById('location');
-const prevEl =  document.getElementById('prevEl');
+const locationEl = document.getElementById('location');
+const prevEl = document.getElementById('prevEl');
 let weatherData = {};
 const weatherArray = []
 const today = new Date();
@@ -63,18 +63,16 @@ function saveData() {
 }
 
 function getSavedData() {
-  const  savedData = localStorage.getItem('weatherArray')
-  const  array = savedData ? JSON.parse(savedData) : [];
-  
+  const savedData = localStorage.getItem('weatherArray')
+  const array = savedData ? JSON.parse(savedData) : [];
+
   if (array.length < 1) {
     document.getElementById('noContent').style.display = 'block'
   } else {
-        document.getElementById('noContent').style.display = 'none'
-  }
-
-  let elements;
-  for(let i = 0; i < array.length; i++) {
-     elements += `
+    document.getElementById('noContent').style.display = 'none'
+    let elements;
+    for (let i = 0; i < array.length; i++) {
+      elements += `
      <div class="card mt-5 p-5">
       <div class="row justify-content-between">
         <div class="col-sm-4">
@@ -98,6 +96,9 @@ function getSavedData() {
           </diV>
       </div>
       </div>`
+    }
+    prevEl.innerHTML = elements
   }
-  prevEl.innerHTML = elements
+
+
 }
